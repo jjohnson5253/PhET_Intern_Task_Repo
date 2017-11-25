@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gBL-Ax-th3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5Nu-2e-s3l">
+            <objects>
+                <viewController id="Ine-Ie-og0" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="POx-ZZ-aFL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phet-social-media-logo" translatesAutoresizingMaskIntoConstraints="NO" id="WlN-Ki-ECb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click the 'Simulation' button in the top right to continue." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1li-YQ-fue">
+                                <rect key="frame" x="18.5" y="553" width="338" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to PhET Interactive Simulations!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWH-PF-UBQ">
+                                <rect key="frame" x="19.5" y="101" width="336" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PWH-PF-UBQ" firstAttribute="centerX" secondItem="POx-ZZ-aFL" secondAttribute="centerX" id="Hbg-23-Ko6"/>
+                            <constraint firstItem="JWB-0A-djB" firstAttribute="bottom" secondItem="1li-YQ-fue" secondAttribute="bottom" constant="98" id="K0b-Hp-Zhj"/>
+                            <constraint firstAttribute="bottom" secondItem="WlN-Ki-ECb" secondAttribute="bottom" id="bBe-qj-Xf9"/>
+                            <constraint firstItem="PWH-PF-UBQ" firstAttribute="top" secondItem="JWB-0A-djB" secondAttribute="top" constant="37" id="fKs-w1-K7w"/>
+                            <constraint firstItem="WlN-Ki-ECb" firstAttribute="top" secondItem="POx-ZZ-aFL" secondAttribute="top" id="gGY-Zw-rtb"/>
+                            <constraint firstItem="WlN-Ki-ECb" firstAttribute="leading" secondItem="POx-ZZ-aFL" secondAttribute="leading" id="jyw-md-skT"/>
+                            <constraint firstItem="1li-YQ-fue" firstAttribute="centerX" secondItem="POx-ZZ-aFL" secondAttribute="centerX" id="liG-ut-R9w"/>
+                            <constraint firstAttribute="trailing" secondItem="WlN-Ki-ECb" secondAttribute="trailing" id="sy1-os-GqS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JWB-0A-djB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wFX-pr-IIb">
+                        <barButtonItem key="rightBarButtonItem" title="Simulation" id="eYR-0e-0iR">
+                            <connections>
+                                <action selector="to_Simulation_Bar_Button:" destination="Ine-Ie-og0" id="55f-iI-j1w"/>
+                                <segue destination="uah-dD-WMt" kind="show" identifier="to_Simulation_Segue" id="6cQ-7V-zSa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JjF-r7-sGR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-954.39999999999998" y="-268.51574212893553"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="nQy-gO-NTt">
+            <objects>
+                <viewController id="uah-dD-WMt" customClass="WebViewController" customModule="PhET_Intern_Task" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cMi-RB-d60">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="qf8-yU-jv6"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aFo-OS-BJG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-196" y="-268.51574212893553"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BVb-Da-k3J">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gBL-Ax-th3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4xA-4w-eNn">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ine-Ie-og0" kind="relationship" relationship="rootViewController" id="Uo6-LK-9TP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wpW-V0-5lX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1655" y="-269"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="phet-social-media-logo" width="1200" height="1200"/>
+    </resources>
+</document>
