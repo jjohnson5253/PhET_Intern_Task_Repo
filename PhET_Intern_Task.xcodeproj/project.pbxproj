@@ -12,7 +12,7 @@
 		E174065F1FC8A54D0076CCDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E174065D1FC8A54D0076CCDA /* Main.storyboard */; };
 		E17406611FC8A54D0076CCDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E17406601FC8A54D0076CCDA /* Assets.xcassets */; };
 		E17406641FC8A54D0076CCDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E17406621FC8A54D0076CCDA /* LaunchScreen.storyboard */; };
-		E17406921FC8F62A0076CCDA /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17406911FC8F62A0076CCDA /* WebViewController.swift */; };
+		E1DA4B3E1FCA460300F4901E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA4B3D1FCA460300F4901E /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		E17406601FC8A54D0076CCDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E17406631FC8A54D0076CCDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E17406651FC8A54D0076CCDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E17406911FC8F62A0076CCDA /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WebViewController.swift; path = ../../../PhET_Intern/PhET_Intern_Task/PhET_Intern_Task/WebViewController.swift; sourceTree = "<group>"; };
+		E1DA4B3D1FCA460300F4901E /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +56,7 @@
 		E17406581FC8A54D0076CCDA /* PhET_Intern_Task */ = {
 			isa = PBXGroup;
 			children = (
-				E17406911FC8F62A0076CCDA /* WebViewController.swift */,
+				E1DA4B3D1FCA460300F4901E /* WebViewController.swift */,
 				E17406591FC8A54D0076CCDA /* AppDelegate.swift */,
 				E174065B1FC8A54D0076CCDA /* ViewController.swift */,
 				E174065D1FC8A54D0076CCDA /* Main.storyboard */,
@@ -140,7 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E174065C1FC8A54D0076CCDA /* ViewController.swift in Sources */,
-				E17406921FC8F62A0076CCDA /* WebViewController.swift in Sources */,
+				E1DA4B3E1FCA460300F4901E /* WebViewController.swift in Sources */,
 				E174065A1FC8A54D0076CCDA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
