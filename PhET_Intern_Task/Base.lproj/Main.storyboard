@@ -21,40 +21,35 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phet-social-media-logo" translatesAutoresizingMaskIntoConstraints="NO" id="WlN-Ki-ECb">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click the 'Simulation' button in the top right to continue." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1li-YQ-fue">
-                                <rect key="frame" x="18.5" y="553" width="338" height="16"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to PhET Interactive Simulations!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWH-PF-UBQ">
                                 <rect key="frame" x="19.5" y="101" width="336" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yhf-SF-jJe">
+                                <rect key="frame" x="109" y="556" width="157" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Click here to begin!"/>
+                                <connections>
+                                    <segue destination="uah-dD-WMt" kind="show" id="eKD-3Z-ESb"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="JWB-0A-djB" firstAttribute="bottom" secondItem="Yhf-SF-jJe" secondAttribute="bottom" constant="77" id="HGU-WD-flX"/>
                             <constraint firstItem="PWH-PF-UBQ" firstAttribute="centerX" secondItem="POx-ZZ-aFL" secondAttribute="centerX" id="Hbg-23-Ko6"/>
-                            <constraint firstItem="JWB-0A-djB" firstAttribute="bottom" secondItem="1li-YQ-fue" secondAttribute="bottom" constant="98" id="K0b-Hp-Zhj"/>
+                            <constraint firstItem="Yhf-SF-jJe" firstAttribute="centerX" secondItem="POx-ZZ-aFL" secondAttribute="centerX" id="Hfo-Kw-Mtc"/>
                             <constraint firstAttribute="bottom" secondItem="WlN-Ki-ECb" secondAttribute="bottom" id="bBe-qj-Xf9"/>
                             <constraint firstItem="PWH-PF-UBQ" firstAttribute="top" secondItem="JWB-0A-djB" secondAttribute="top" constant="37" id="fKs-w1-K7w"/>
                             <constraint firstItem="WlN-Ki-ECb" firstAttribute="top" secondItem="POx-ZZ-aFL" secondAttribute="top" id="gGY-Zw-rtb"/>
                             <constraint firstItem="WlN-Ki-ECb" firstAttribute="leading" secondItem="POx-ZZ-aFL" secondAttribute="leading" id="jyw-md-skT"/>
-                            <constraint firstItem="1li-YQ-fue" firstAttribute="centerX" secondItem="POx-ZZ-aFL" secondAttribute="centerX" id="liG-ut-R9w"/>
                             <constraint firstAttribute="trailing" secondItem="WlN-Ki-ECb" secondAttribute="trailing" id="sy1-os-GqS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JWB-0A-djB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="wFX-pr-IIb">
-                        <barButtonItem key="rightBarButtonItem" title="Simulation" id="eYR-0e-0iR">
-                            <connections>
-                                <action selector="to_Simulation_Bar_Button:" destination="Ine-Ie-og0" id="55f-iI-j1w"/>
-                                <segue destination="uah-dD-WMt" kind="show" identifier="to_Simulation_Segue" id="6cQ-7V-zSa"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="wFX-pr-IIb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JjF-r7-sGR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
