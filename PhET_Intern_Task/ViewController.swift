@@ -28,6 +28,8 @@ class ViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = false
     }
     
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

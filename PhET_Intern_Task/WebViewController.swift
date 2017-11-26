@@ -27,7 +27,7 @@ class WebViewController: UIViewController, WKUIDelegate { //WKUIDelegate needed 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         //load a URL request to webview of the simulation's URL
         let myURL = URL(string: "https://phet.colorado.edu/sims/html/circuit-construction-kit-dc/latest/circuit-construction-kit-dc_en.html")
         let myRequest = URLRequest(url: myURL!)
