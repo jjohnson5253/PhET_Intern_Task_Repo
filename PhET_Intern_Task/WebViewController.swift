@@ -7,39 +7,35 @@
 //
 
 import UIKit
-import WebKit //needed for webView component
+import WebKit
 
 //This view controller will have the web view of the simulation
 class WebViewController: UIViewController, WKUIDelegate { //WKUIDelegate needed for WKWebView
     
     var webView: WKWebView! //create WKWebView object
 
-    //Programmatically add a WKView component
     override func loadView() {
-        let webConfiguration = WKWebViewConfiguration() //create WKWebViewConfig object
-        webView = WKWebView(frame: .zero, configuration: webConfiguration) //set webView
+        //Programmatically add a WKView component
+        let webConfiguration = WKWebViewConfiguration()
+        webView = WKWebView(frame: .zero, configuration: webConfiguration)
         webView.uiDelegate = self
-        //webView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        view = webView //set view of this controller to webView
-        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        view = webView
+        
         //disable the swiping navigation function since it interfers with simulation
-        webView.evaluateJavaScript("window.scrollBy(1, 1);window.scrollBy(-1, -1);", completionHandler: nil)
-
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Set url to the simulation
+        //load a URL request to webview of the simulation's URL
         let myURL = URL(string: "https://phet.colorado.edu/sims/html/circuit-construction-kit-dc/latest/circuit-construction-kit-dc_en.html")
-        let myRequest = URLRequest(url: myURL!) //create a URLRequest to the simulation
-        webView.load(myRequest) //load the request to the view
-        // Do any additional setup after loading the view.
+        let myRequest = URLRequest(url: myURL!)
+        webView.load(myRequest)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 }
