@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Initial View Controller-->
         <scene sceneID="5Nu-2e-s3l">
             <objects>
-                <viewController id="Ine-Ie-og0" customClass="ViewController" customModule="PhET_Intern_Task" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ine-Ie-og0" customClass="InitialViewController" customModule="PhET_Intern_Task" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="POx-ZZ-aFL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -54,7 +54,7 @@
             <objects>
                 <viewController id="uah-dD-WMt" customClass="WebViewController" customModule="PhET_Intern_Task" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cMi-RB-d60">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <viewLayoutGuide key="safeArea" id="qf8-yU-jv6"/>
@@ -64,10 +64,10 @@
             </objects>
             <point key="canvasLocation" x="546" y="-269"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Simulation Table View Controller-->
         <scene sceneID="J1a-63-UMB">
             <objects>
-                <tableViewController id="Dq1-GZ-zzS" sceneMemberID="viewController">
+                <tableViewController id="Dq1-GZ-zzS" customClass="SimulationTableViewController" customModule="PhET_Intern_Task" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3et-bL-mch">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,11 +77,11 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5Fv-Hd-LmJ" id="wQj-6i-NIs">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ba2-j2-K28">
-                                            <rect key="frame" x="43" y="11" width="316" height="21"/>
+                                            <rect key="frame" x="16" y="11" width="343" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -99,6 +99,9 @@
                             <outlet property="delegate" destination="Dq1-GZ-zzS" id="fTM-xT-gM6"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="uah-dD-WMt" kind="show" identifier="cellToSimulationSegue" id="E2V-Le-lre"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gn6-TQ-h5c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

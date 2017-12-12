@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  InitialViewController.swift
 //  PhET_Intern_Task
 //
 //  Created by Jake Johnson on 11/24/17.
@@ -10,7 +10,7 @@ import UIKit
 
 //This is the opening ViewController
 
-class ViewController: UIViewController {
+class InitialViewController: UIViewController {
 
     override func viewDidLoad() {
         

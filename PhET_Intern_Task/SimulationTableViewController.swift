@@ -17,14 +17,17 @@ class SimulationTableViewController: UITableViewController {
     var simulations = [Simulation]()
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
+        // set title for this view
+        
+        self.title = "Simulations"
 
         // load initial simulations
         
         loadInitialSimulations()
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,24 +38,41 @@ class SimulationTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+
+        return simulations.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        
+        // Table view cells are reused and should be dequeued using a cell identifier
+        
+        let cellIdentifier = "SimulationTableViewCell"
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? SimulationTableViewCell else {
+            fatalError("The dequeued cell is not an instance of SimulationTableViewCell.")
+        }
+        
+        // Fetches appropriate simulation for the data source layout.
+        
+        let simulation = simulations[indexPath.row]
+        
+        cell.nameLabel.text = simulation.name
 
         return cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        performSegue(withIdentifier: "cellToSimulationSegue", sender: cell)
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -89,15 +109,37 @@ class SimulationTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "cellToSimulationSegue" {
+            
+            guard let webViewController = segue.destination as? WebViewController else {
+                
+                fatalError("Unexpected destination: \(segue.destination)")
+            
+            }
+            
+            guard let selectedSimulationCell = sender as? SimulationTableViewCell else {
+                
+                fatalError("Unexpected sender: \(String(describing: sender))")
+            
+            }
+            
+            guard let indexPath = tableView.indexPath(for: selectedSimulationCell) else{
+                
+                fatalError("The selected cell is not being displayed correctly by the table")
+            }
+            
+            let selectedSimulation = simulations[indexPath.row]
+            
+            webViewController.simulation = selectedSimulation
+            
+        }
     }
-    */
     
     //MARK: Private Methods
     
@@ -105,25 +147,31 @@ class SimulationTableViewController: UITableViewController {
         
         // Simulation class's initializer is failable, so need to check the result returned by the initializer
         
-        guard let simulation1 = Simulation(name: "Simulation 1", url: "sim1.url") else {
+        guard let circuitConstructSim = Simulation(name: "Circuit Construction Kit", url: "https://phet.colorado.edu/sims/html/circuit-construction-kit-dc/latest/circuit-construction-kit-dc_en.html") else {
             
             fatalError("Unable to instantiate simulation1")
             
         }
         
-        guard let simulation2 = Simulation(name: "Simulation 2", url: "sim2.url") else {
+        guard let buildAnAtomSim = Simulation(name: "Build an Atom", url: "https://phet.colorado.edu/sims/html/build-an-atom/latest/build-an-atom_en.html") else {
+            
+            fatalError("Unable to instantiate simulation1")
+            
+        }
+        
+        guard let energySkateParkSim = Simulation(name: "Energy Skate Park", url: "https://phet.colorado.edu/sims/html/energy-skate-park-basics/latest/energy-skate-park-basics_en.html") else {
             
             fatalError("Unable to instantiate simulation2")
             
         }
         
-        guard let simulation3 = Simulation(name: "Simulation 3", url: "sim3.url") else {
+        guard let johnTravoltageSim = Simulation(name: "John Travoltage", url: "https://phet.colorado.edu/sims/html/john-travoltage/latest/john-travoltage_en.html") else {
             
             fatalError("Unable to instantiate simulation3")
             
         }
         
-        simulations += [simulation1, simulation2, simulation3]
+        simulations += [circuitConstructSim, buildAnAtomSim, energySkateParkSim, johnTravoltageSim]
         
     }
 

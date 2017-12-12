@@ -13,6 +13,9 @@ import WebKit
 
 class WebViewController: UIViewController, WKUIDelegate {
     
+    // This value is either passed by `SimulationTableViewController` in `prepare(for segue:)` or constructed as part of adding a new simulation.
+    
+    var simulation: Simulation?
     // create WKWebView object
     
     var webView: WKWebView!
@@ -41,7 +44,7 @@ class WebViewController: UIViewController, WKUIDelegate {
 
         //load a URL request to webview of the simulation's URL
         
-        let myURL = URL(string: "https://phet.colorado.edu/sims/html/circuit-construction-kit-dc/latest/circuit-construction-kit-dc_en.html")
+        let myURL = URL(string: (simulation?.url)!)
         
         let myRequest = URLRequest(url: myURL!)
         
