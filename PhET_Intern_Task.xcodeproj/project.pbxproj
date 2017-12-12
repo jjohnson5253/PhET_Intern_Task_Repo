@@ -12,8 +12,20 @@
 		E174065F1FC8A54D0076CCDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E174065D1FC8A54D0076CCDA /* Main.storyboard */; };
 		E17406611FC8A54D0076CCDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E17406601FC8A54D0076CCDA /* Assets.xcassets */; };
 		E17406641FC8A54D0076CCDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E17406621FC8A54D0076CCDA /* LaunchScreen.storyboard */; };
+		E1C003381FDFC60900266A19 /* Simulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C003371FDFC60900266A19 /* Simulation.swift */; };
+		E1C003421FDFCADC00266A19 /* PhET_Intern_Task_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C003411FDFCADC00266A19 /* PhET_Intern_Task_Tests.swift */; };
 		E1DA4B3E1FCA460300F4901E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA4B3D1FCA460300F4901E /* WebViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E1C003441FDFCADC00266A19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E174064E1FC8A54C0076CCDA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E17406551FC8A54C0076CCDA;
+			remoteInfo = PhET_Intern_Task;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		E17406561FC8A54D0076CCDA /* PhET_Intern_Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhET_Intern_Task.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -23,11 +35,22 @@
 		E17406601FC8A54D0076CCDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E17406631FC8A54D0076CCDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E17406651FC8A54D0076CCDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1C003371FDFC60900266A19 /* Simulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simulation.swift; sourceTree = "<group>"; };
+		E1C0033F1FDFCADC00266A19 /* PhET_Intern_Task_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhET_Intern_Task_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1C003411FDFCADC00266A19 /* PhET_Intern_Task_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhET_Intern_Task_Tests.swift; sourceTree = "<group>"; };
+		E1C003431FDFCADC00266A19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1DA4B3D1FCA460300F4901E /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E17406531FC8A54C0076CCDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1C0033C1FDFCADC00266A19 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				E17406581FC8A54D0076CCDA /* PhET_Intern_Task */,
+				E1C003401FDFCADC00266A19 /* PhET_Intern_Task_Tests */,
 				E17406571FC8A54D0076CCDA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				E17406561FC8A54D0076CCDA /* PhET_Intern_Task.app */,
+				E1C0033F1FDFCADC00266A19 /* PhET_Intern_Task_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -59,12 +84,22 @@
 				E1DA4B3D1FCA460300F4901E /* WebViewController.swift */,
 				E17406591FC8A54D0076CCDA /* AppDelegate.swift */,
 				E174065B1FC8A54D0076CCDA /* ViewController.swift */,
+				E1C003371FDFC60900266A19 /* Simulation.swift */,
 				E174065D1FC8A54D0076CCDA /* Main.storyboard */,
 				E17406601FC8A54D0076CCDA /* Assets.xcassets */,
 				E17406621FC8A54D0076CCDA /* LaunchScreen.storyboard */,
 				E17406651FC8A54D0076CCDA /* Info.plist */,
 			);
 			path = PhET_Intern_Task;
+			sourceTree = "<group>";
+		};
+		E1C003401FDFCADC00266A19 /* PhET_Intern_Task_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E1C003411FDFCADC00266A19 /* PhET_Intern_Task_Tests.swift */,
+				E1C003431FDFCADC00266A19 /* Info.plist */,
+			);
+			path = PhET_Intern_Task_Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,19 +122,42 @@
 			productReference = E17406561FC8A54D0076CCDA /* PhET_Intern_Task.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E1C0033E1FDFCADC00266A19 /* PhET_Intern_Task_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1C003461FDFCADC00266A19 /* Build configuration list for PBXNativeTarget "PhET_Intern_Task_Tests" */;
+			buildPhases = (
+				E1C0033B1FDFCADC00266A19 /* Sources */,
+				E1C0033C1FDFCADC00266A19 /* Frameworks */,
+				E1C0033D1FDFCADC00266A19 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E1C003451FDFCADC00266A19 /* PBXTargetDependency */,
+			);
+			name = PhET_Intern_Task_Tests;
+			productName = PhET_Intern_Task_Tests;
+			productReference = E1C0033F1FDFCADC00266A19 /* PhET_Intern_Task_Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		E174064E1FC8A54C0076CCDA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0910;
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Jake Johnson";
 				TargetAttributes = {
 					E17406551FC8A54C0076CCDA = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+					};
+					E1C0033E1FDFCADC00266A19 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E17406551FC8A54C0076CCDA;
 					};
 				};
 			};
@@ -117,6 +175,7 @@
 			projectRoot = "";
 			targets = (
 				E17406551FC8A54C0076CCDA /* PhET_Intern_Task */,
+				E1C0033E1FDFCADC00266A19 /* PhET_Intern_Task_Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -132,6 +191,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E1C0033D1FDFCADC00266A19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -139,13 +205,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1C003381FDFC60900266A19 /* Simulation.swift in Sources */,
 				E174065C1FC8A54D0076CCDA /* ViewController.swift in Sources */,
 				E1DA4B3E1FCA460300F4901E /* WebViewController.swift in Sources */,
 				E174065A1FC8A54D0076CCDA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E1C0033B1FDFCADC00266A19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1C003421FDFCADC00266A19 /* PhET_Intern_Task_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E1C003451FDFCADC00266A19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E17406551FC8A54C0076CCDA /* PhET_Intern_Task */;
+			targetProxy = E1C003441FDFCADC00266A19 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E174065D1FC8A54D0076CCDA /* Main.storyboard */ = {
@@ -304,6 +387,40 @@
 			};
 			name = Release;
 		};
+		E1C003471FDFCADC00266A19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F3M935826C;
+				INFOPLIST_FILE = PhET_Intern_Task_Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "JakeApps.PhET-Intern-Task-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhET_Intern_Task.app/PhET_Intern_Task";
+			};
+			name = Debug;
+		};
+		E1C003481FDFCADC00266A19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F3M935826C;
+				INFOPLIST_FILE = PhET_Intern_Task_Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "JakeApps.PhET-Intern-Task-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhET_Intern_Task.app/PhET_Intern_Task";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -321,6 +438,15 @@
 			buildConfigurations = (
 				E17406691FC8A54D0076CCDA /* Debug */,
 				E174066A1FC8A54D0076CCDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1C003461FDFCADC00266A19 /* Build configuration list for PBXNativeTarget "PhET_Intern_Task_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1C003471FDFCADC00266A19 /* Debug */,
+				E1C003481FDFCADC00266A19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
