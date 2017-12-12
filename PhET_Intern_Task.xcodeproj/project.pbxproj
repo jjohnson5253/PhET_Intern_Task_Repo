@@ -14,6 +14,8 @@
 		E17406641FC8A54D0076CCDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E17406621FC8A54D0076CCDA /* LaunchScreen.storyboard */; };
 		E1C003381FDFC60900266A19 /* Simulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C003371FDFC60900266A19 /* Simulation.swift */; };
 		E1C003421FDFCADC00266A19 /* PhET_Intern_Task_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C003411FDFCADC00266A19 /* PhET_Intern_Task_Tests.swift */; };
+		E1C0034A1FDFDB4300266A19 /* SimulationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C003491FDFDB4300266A19 /* SimulationTableViewCell.swift */; };
+		E1C0034C1FDFDE9900266A19 /* SimulationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C0034B1FDFDE9900266A19 /* SimulationTableViewController.swift */; };
 		E1DA4B3E1FCA460300F4901E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA4B3D1FCA460300F4901E /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,8 @@
 		E1C0033F1FDFCADC00266A19 /* PhET_Intern_Task_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhET_Intern_Task_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1C003411FDFCADC00266A19 /* PhET_Intern_Task_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhET_Intern_Task_Tests.swift; sourceTree = "<group>"; };
 		E1C003431FDFCADC00266A19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1C003491FDFDB4300266A19 /* SimulationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationTableViewCell.swift; sourceTree = "<group>"; };
+		E1C0034B1FDFDE9900266A19 /* SimulationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationTableViewController.swift; sourceTree = "<group>"; };
 		E1DA4B3D1FCA460300F4901E /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,10 +85,12 @@
 		E17406581FC8A54D0076CCDA /* PhET_Intern_Task */ = {
 			isa = PBXGroup;
 			children = (
-				E1DA4B3D1FCA460300F4901E /* WebViewController.swift */,
 				E17406591FC8A54D0076CCDA /* AppDelegate.swift */,
 				E174065B1FC8A54D0076CCDA /* ViewController.swift */,
+				E1DA4B3D1FCA460300F4901E /* WebViewController.swift */,
+				E1C003491FDFDB4300266A19 /* SimulationTableViewCell.swift */,
 				E1C003371FDFC60900266A19 /* Simulation.swift */,
+				E1C0034B1FDFDE9900266A19 /* SimulationTableViewController.swift */,
 				E174065D1FC8A54D0076CCDA /* Main.storyboard */,
 				E17406601FC8A54D0076CCDA /* Assets.xcassets */,
 				E17406621FC8A54D0076CCDA /* LaunchScreen.storyboard */,
@@ -205,9 +211,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1C0034C1FDFDE9900266A19 /* SimulationTableViewController.swift in Sources */,
 				E1C003381FDFC60900266A19 /* Simulation.swift in Sources */,
 				E174065C1FC8A54D0076CCDA /* ViewController.swift in Sources */,
 				E1DA4B3E1FCA460300F4901E /* WebViewController.swift in Sources */,
+				E1C0034A1FDFDB4300266A19 /* SimulationTableViewCell.swift in Sources */,
 				E174065A1FC8A54D0076CCDA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

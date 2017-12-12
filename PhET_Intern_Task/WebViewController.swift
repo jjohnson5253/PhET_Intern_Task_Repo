@@ -9,33 +9,50 @@
 import UIKit
 import WebKit
 
-//This view controller will have the web view of the simulation
-class WebViewController: UIViewController, WKUIDelegate { //WKUIDelegate needed for WKWebView
+// This view controller will have the web view of the simulation
+
+class WebViewController: UIViewController, WKUIDelegate {
     
-    var webView: WKWebView! //create WKWebView object
+    // create WKWebView object
+    
+    var webView: WKWebView!
 
     override func loadView() {
-        //Programmatically add a WKView component
+        
+        // programmatically add a WKView component
+        
         let webConfiguration = WKWebViewConfiguration()
+        
         webView = WKWebView(frame: .zero, configuration: webConfiguration)
+        
         webView.uiDelegate = self
+        
         view = webView
         
-        //disable the swiping navigation function since it interfers with simulation
+        // disable the swiping navigation function since it interfers with simulation
+        
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        
     }
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
         //load a URL request to webview of the simulation's URL
+        
         let myURL = URL(string: "https://phet.colorado.edu/sims/html/circuit-construction-kit-dc/latest/circuit-construction-kit-dc_en.html")
+        
         let myRequest = URLRequest(url: myURL!)
+        
         webView.load(myRequest)
+        
     }
     
     override func didReceiveMemoryWarning() {
+        
         super.didReceiveMemoryWarning()
+        
     }
     
 }

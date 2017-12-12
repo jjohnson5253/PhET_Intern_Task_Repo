@@ -36,6 +36,7 @@ class Simulation {
         self.name = name
         
         self.url = url
+        
     }
 
 }
